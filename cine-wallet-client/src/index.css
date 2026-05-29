@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #060816;
+  --card: #0F172A;
+  --purple: #8B5CF6;
+  --blue: #3B82F6;
+  --pink: #EC4899;
+  --text: #F8FAFC;
+  --gray: #94A3B8;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 20px;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+  color: inherit;
+}
+
+.glass select,
+.glass input,
+.glass textarea,
+/* .glass button {
+  background: transparent;
+  color: inherit;
+} */
+
+.glass option {
+  background: rgba(15, 23, 42, 0.95);
+  color: #F8FAFC;
+}
+
+.neon-border {
+  border: 1px solid rgba(139,92,246,0.4);
+  box-shadow: 0 0 15px rgba(139,92,246,0.25);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: rgba(139, 92, 246, 0.15);
+  filter: blur(120px);
+  top: -100px;
+  left: -100px;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: rgba(236, 72, 153, 0.12);
+  filter: blur(120px);
+  bottom: -100px;
+  right: -100px;
+  z-index: -1;
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: floating 4s ease-in-out infinite;
+}
