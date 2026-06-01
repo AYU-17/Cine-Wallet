@@ -9,6 +9,7 @@ import AdminDashboard from "../pages/AdminDashboard";
 import WatchlistPage from "../pages/WatchlistPage";
 import ProtectedRoute from "./ProtectedRoute";
 import DiscoverPage from "../pages/DiscoverPage";
+import AddMoviePage from "../pages/AddMoviePage";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
         <Route path="/watchlist" element={<WatchlistPage />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/discover" element={<DiscoverPage />} />
+        <Route path="/admin/add-movie" element={<AddMoviePage />}/>
       </Routes>
     </BrowserRouter>
   );
